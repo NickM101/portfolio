@@ -1,12 +1,11 @@
-import Head from "next/head";
-import Image from "next/image";
-import Link from "next/link";
-
-import Layout from "@/components/Layout";
 import AnimatedText from "@/components/AnimatedText";
-
-import dummyImage from "../../public/images/playstore.png";
+import Head from "next/head";
+import HireMe from "@/components/HireMe";
+import Image from "next/image";
+import Layout from "@/components/Layout";
+import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
+import dummyImage from "../../public/images/playstore.png";
 
 export default function Home() {
   return (
@@ -59,6 +58,7 @@ export default function Home() {
             </div>
           </div>
         </Layout>
+        <HireMe />
       </main>
     </>
   );
