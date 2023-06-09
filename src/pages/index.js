@@ -1,10 +1,12 @@
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 import Layout from "@/components/Layout";
-
-import dummyImage from '../../public/images/playstore.png'
 import AnimatedText from "@/components/AnimatedText";
+
+import dummyImage from "../../public/images/playstore.png";
+import { LinkArrow } from "@/components/Icons";
 
 export default function Home() {
   return (
@@ -15,16 +17,47 @@ export default function Home() {
       </Head>
       <main>
         <Layout className="pt-0">
-         <div className="flex items-center justify-between w-full">
-          <div className="w-1/2">
-            <Image src={dummyImage} alt="Nick Munene" className="w-full h-auto"/>
+          <div className="flex items-center justify-between w-full">
+            <div className="w-1/2">
+              <Image
+                src={dummyImage}
+                alt="Nick Munene"
+                className="w-full h-auto"
+              />
+            </div>
+            <div className="w-1/2 flex flex-col items-center self-center mx-4">
+              <AnimatedText
+                className="!text-6xl !text-left"
+                text="Transforming Ideas into Elegant Software Solutions."
+              />
+
+              <p className="my-4 text base font-medium">
+                My expertise lies in crafting robust, scalable, and user-centric
+                software solutions that solve complex challenges. By leveraging
+                my strong analytical skills, attention to detail, and in-depth
+                knowledge of industry best practices, I have helped numerous
+                organizations optimize their operations and achieve their
+                digital goals.
+              </p>
+              <div className="flex items-center self-start mt-2">
+                <Link
+                  href="/resume.pdf"
+                  target="_blank"
+                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold mx-2 hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                  download={true}
+                >
+                  Resume <LinkArrow className="w-6 ml-1" />
+                </Link>
+                <Link
+                  href="mailto:nickmunene101@gmail.com"
+                  target="_blank"
+                  className="ml-4 text-lg font-medium capitalize text-dark underline "
+                >
+                  Contact Me
+                </Link>
+              </div>
+            </div>
           </div>
-          <div className="w-1/2 flex flex-col items-center self-center">
-            <AnimatedText className="!text-6xl !text-left" text="Transforming Ideas into Elegant Software Solutions."/>
-            
-            <p >My expertise lies in crafting robust, scalable, and user-centric software solutions that solve complex challenges. By leveraging my strong analytical skills, attention to detail, and in-depth knowledge of industry best practices, I have helped numerous organizations optimize their operations and achieve their digital goals.</p>
-          </div>
-         </div>
         </Layout>
       </main>
     </>
