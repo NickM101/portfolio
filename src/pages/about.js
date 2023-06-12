@@ -7,6 +7,7 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import profilePicture from "../../public/images/profile.png";
 import ParallaxSquare from "@/components/ParallaxSquare";
+import Experience from "@/components/Experience";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -150,6 +151,7 @@ const about = () => {
               ))}
             </div>
           </div>
+          <Experience />
         </Layout>
       </main>
     </>
