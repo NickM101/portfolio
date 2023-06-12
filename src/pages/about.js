@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useInView, useMotionValue, useSpring } from "framer-motion";
 
 import AnimatedText from "@/components/AnimatedText";
@@ -14,6 +14,7 @@ const AnimatedNumbers = ({ value }) => {
   const motionValue = useMotionValue(0);
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
+
 
   useEffect(() => {
     if (isInView) {
@@ -33,6 +34,24 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
+
+
+  const [jsonData, setJsonData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch('tech.json');
+        const data = await response.json();
+        setJsonData(data);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <>
       <Head>
@@ -95,7 +114,7 @@ const about = () => {
               <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark" />
               <Image
                 src={profilePicture}
-                alt="profile picture"
+                alt="Nick Munene"
                 className="w-full h-auto rounded-2xl"
               />
             </div>
@@ -124,8 +143,11 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="my-4 py-4">
-              <ParallaxSquare imageSrc={profilePicture} text={'React Native'}  />
+          <div className="my-36">
+            <h2 className="font-bold text-8xl w-full text-center">Skills</h2>
+            <div className="w-full h-screen flex flex-wrap items-center justify-center rounded-full">
+              {jsonData.map((item, index) => <ParallaxSquare imageSrc={profilePicture} text={item.name} />)}
+            </div>
           </div>
         </Layout>
       </main>
