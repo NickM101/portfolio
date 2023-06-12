@@ -7,7 +7,7 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         <h3>
           {position}&nbsp;<a href={companyLink}>@{company}  </a>
         </h3>
-        <span>{time | address}</span>
+        <span>{time} | {address}</span>
         <p>{work}</p>
       </div>
     </li>
