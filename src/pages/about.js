@@ -15,7 +15,6 @@ const AnimatedNumbers = ({ value }) => {
   const springValue = useSpring(motionValue, { duration: 3000 });
   const isInView = useInView(ref, { once: true });
 
-
   useEffect(() => {
     if (isInView) {
       motionValue.set(value);
@@ -34,18 +33,16 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
-
-
   const [jsonData, setJsonData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch('tech.json');
+        const response = await fetch("tech.json");
         const data = await response.json();
         setJsonData(data);
       } catch (error) {
-        console.error('Error fetching data:', error);
+        console.error("Error fetching data:", error);
       }
     };
 
@@ -143,10 +140,14 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="my-36">
+          <div className="my-20">
             <h2 className="font-bold text-8xl w-full text-center">Skills</h2>
-            <div className="w-full h-screen flex flex-wrap items-center justify-center rounded-full">
-              {jsonData.map((item, index) => <ParallaxSquare imageSrc={profilePicture} text={item.name} />)}
+            <div className="w-full flex flex-wrap items-center justify-center">
+              {jsonData.map((item, index) => (
+                <div key={index} className="m-4">
+                  <ParallaxSquare imageSrc={profilePicture} text={item.name} />
+                </div>
+              ))}
             </div>
           </div>
         </Layout>
