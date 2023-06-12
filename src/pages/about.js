@@ -6,6 +6,7 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import profilePicture from "../../public/images/profile.png";
+import ParallaxSquare from "@/components/ParallaxSquare";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -122,6 +123,9 @@ const about = () => {
                 </h2>
               </div>
             </div>
+          </div>
+          <div className="my-4 py-4">
+              <ParallaxSquare imageSrc={profilePicture} text={'React Native'}  />
           </div>
         </Layout>
       </main>
