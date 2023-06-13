@@ -44,6 +44,42 @@ const FeaturedProject = ({ type, title, summary, img, link, github }) => {
   );
 };
 
+const Project = ({ title, type, img, link, github }) => {
+  return (
+    <article className="w-full flex items-center justify-center rounded-2xl border border-solid border-black bg-light p-6 relative">
+      <Link
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+        href={link}
+        target="_blank"
+      >
+        <Image src={img} alt={title} className="w-full h-auto" />
+      </Link>
+      <div className="w-full flex flex-col items-start justify-between pl-6">
+        <span className="text-primary font-medium text-xl">{type}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-2"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold">{title}</h2>
+        </Link>
+        <div className="mt-2 flex items-center">
+          <Link href={github} target="_blank" className="w-10">
+            <GithubIcon />
+          </Link>
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+          >
+            Visit Projects
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
 const projects = () => {
   return (
     <>
@@ -53,7 +89,10 @@ const projects = () => {
       </Head>
       <main className="w-full mb-16 flex flex-col items-center justify-center">
         <Layout className="pt-16">
-          <AnimatedText text="Imagination Trumps Knowledge!" className="mb-16"/>
+          <AnimatedText
+            text="Imagination Trumps Knowledge!"
+            className="mb-16"
+          />
           <div className="grid grid-cols-12 gap-24">
             <div className="col-span-12">
               <FeaturedProject
@@ -69,8 +108,34 @@ const projects = () => {
                 type={"Mobile"}
               />
             </div>
-            <div className="col-span-6">Project-1</div>
-            <div className="col-span-6">Project-2</div>
+            <div className="col-span-6">
+              <Project
+                link={
+                  "https://play.google.com/store/apps/details?id=com.nexusnova.ginjuice"
+                }
+                github={"https://github.com/NickM101/GinJuice"}
+                img={ginjuice}
+                // summary={
+                //   "Elevate your mixology game with Gin Juice. Discover a world of exquisite gin-based cocktails crafted to perfection. From classic gin and tonics to innovative creations, our extensive library of recipes offers something for every taste. Our user-friendly interface makes cocktail creation a breeze, allowing you to explore, mix, and master the art of mixology."
+                // }
+                title={"GinJuice"}
+                type={"Mobile"}
+              />
+            </div>
+            <div className="col-span-6">
+              <Project
+                link={
+                  "https://play.google.com/store/apps/details?id=com.nexusnova.ginjuice"
+                }
+                github={"https://github.com/NickM101/GinJuice"}
+                img={ginjuice}
+                // summary={
+                //   "Elevate your mixology game with Gin Juice. Discover a world of exquisite gin-based cocktails crafted to perfection. From classic gin and tonics to innovative creations, our extensive library of recipes offers something for every taste. Our user-friendly interface makes cocktail creation a breeze, allowing you to explore, mix, and master the art of mixology."
+                // }
+                title={"GinJuice"}
+                type={"Mobile"}
+              />
+            </div>
             <div className="col-span-12">
               <FeaturedProject
                 link={
@@ -86,8 +151,34 @@ const projects = () => {
               />
             </div>
 
-            <div className="col-span-6">Project -5</div>
-            <div className="col-span-6">Project -6</div>
+            <div className="col-span-6">
+              <Project
+                link={
+                  "https://play.google.com/store/apps/details?id=com.nexusnova.ginjuice"
+                }
+                github={"https://github.com/NickM101/GinJuice"}
+                img={ginjuice}
+                // summary={
+                //   "Elevate your mixology game with Gin Juice. Discover a world of exquisite gin-based cocktails crafted to perfection. From classic gin and tonics to innovative creations, our extensive library of recipes offers something for every taste. Our user-friendly interface makes cocktail creation a breeze, allowing you to explore, mix, and master the art of mixology."
+                // }
+                title={"GinJuice"}
+                type={"Mobile"}
+              />
+            </div>
+            <div className="col-span-6">
+              <Project
+                link={
+                  "https://play.google.com/store/apps/details?id=com.nexusnova.ginjuice"
+                }
+                github={"https://github.com/NickM101/GinJuice"}
+                img={ginjuice}
+                // summary={
+                //   "Elevate your mixology game with Gin Juice. Discover a world of exquisite gin-based cocktails crafted to perfection. From classic gin and tonics to innovative creations, our extensive library of recipes offers something for every taste. Our user-friendly interface makes cocktail creation a breeze, allowing you to explore, mix, and master the art of mixology."
+                // }
+                title={"GinJuice"}
+                type={"Mobile"}
+              />
+            </div>
           </div>
         </Layout>
       </main>
