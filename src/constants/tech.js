@@ -44,7 +44,7 @@ export const work_experience = [
     work: [
       "Collaborated with a large team of developers to identify and fix bugs in an existing application, ensuring its stability and optimal performance.",
       "Utilized strong problem-solving skills to investigate and diagnose reported issues, working closely with team members to devise effective solutions.",
-      "Participated in regular code reviews and debugging sessions, providing valuable insights and contributing to the overall improvement of the application's quality."
+      "Participated in regular code reviews and debugging sessions, providing valuable insights and contributing to the overall improvement of the application's quality.",
     ],
   },
   {
@@ -55,9 +55,9 @@ export const work_experience = [
     companyLink: "https://mombo.co.ke/",
     time: "2021-08 - 2022-07",
     work: [
-        "Independently developed and managed both web and mobile applications, taking responsibility for the front-end development process from start to finish.",
-        "Established seamless connections between the front-end and backend systems by working closely with the backend team, ensuring smooth data flow and optimal application performance.",
-        "Integrated APIs from third-party services to expand application functionality, leveraging external resources to enhance the capabilities of the applications."
+      "Independently developed and managed both web and mobile applications, taking responsibility for the front-end development process from start to finish.",
+      "Established seamless connections between the front-end and backend systems by working closely with the backend team, ensuring smooth data flow and optimal application performance.",
+      "Integrated APIs from third-party services to expand application functionality, leveraging external resources to enhance the capabilities of the applications.",
     ],
   },
   {
@@ -68,21 +68,47 @@ export const work_experience = [
     companyLink: "https://www.medbookafrica.com/",
     time: "2019-05 - 2021-05",
     work: [
-        "Developed and implemented visually appealing and user-friendly mobile applications for both iOS and Android platforms, leveraging strong design skills and technical expertise.",
-        "Collaborated closely with the marketing team to align app designs with the brand's visual identity and marketing strategies, ensuring consistent and engaging user experiences.",
-        "Worked in a cross-functional environment, collaborating with stakeholders and decision-makers to understand business goals and translate them into innovative mobile application solutions.",
-        "Played a key role in integrating mobile applications into the existing system infrastructure by collaborating with backend developers, system administrators, and other teams, ensuring seamless functionality and data flow."
+      "Developed and implemented visually appealing and user-friendly mobile applications for both iOS and Android platforms, leveraging strong design skills and technical expertise.",
+      "Collaborated closely with the marketing team to align app designs with the brand's visual identity and marketing strategies, ensuring consistent and engaging user experiences.",
+      "Worked in a cross-functional environment, collaborating with stakeholders and decision-makers to understand business goals and translate them into innovative mobile application solutions.",
+      "Played a key role in integrating mobile applications into the existing system infrastructure by collaborating with backend developers, system administrators, and other teams, ensuring seamless functionality and data flow.",
     ],
   },
 ];
 
-
-export const school_education = [{
-major: "",
-name: "",
-date: "",
-honor: "place",
-},
-{
-
-},];
+export const school_education = [
+  {
+    major: "Bachelor of Science in Computer Science (ongoing)",
+    name: "Chuka University, Chuka",
+    date: "2022-08 - 2026-03",
+    honor: "Degree",
+    courseWork: [
+        "Programming Languages",
+        "Data Structures and Algorithms",
+        "Computer Organization and Architecture",
+        "Machine Learning"
+    ],
+  },
+  {
+    major: "Information Technology",
+    name: "Catholic University of East Africa, Nairobi",
+    date: "2022-08 - 2026-03",
+    honor: "Diploma",
+    courseWork: [
+        "Introduction to Information Technology",
+        "Network Administration and Security",
+        "Information Systems Management"
+    ],
+  },
+  {
+    major: "Core Program in Web Development",
+    name: "Moringa School",
+    date: "2018-10 - 2019-02",
+    honor: "Certificate",
+    courseWork: [
+        "Web Development Technologies",
+        "Database Management Systems",
+    ],
+  },
+  
+];
