@@ -1,11 +1,13 @@
 import React, { useRef } from "react";
 import { useScroll, motion } from "framer-motion";
 import Lilcon from "./Lilcon";
+import { work_experience } from "@/constants/tech";
 
-const Details = ({ position, company, companyLink, time, address, work }) => {
+const Details = ({ item }) => {
   const ref = useRef(null);
   return (
     <li
+      key={item.id}
       ref={ref}
       className="my-8 first:mt-0 last:mb-0 w-[60%] mx-auto flex flex-col items-center justify-between"
     >
@@ -17,19 +19,25 @@ const Details = ({ position, company, companyLink, time, address, work }) => {
         transition={{ duration: 0.5, type: "spring" }}
       >
         <h3 className="capitalize font-bold text-2xl">
-          {position}&nbsp;
+          {item.position}&nbsp;
           <a
-            href={companyLink}
+            href={item.companyLink}
             target="_blank"
             className="text-primary capitalize"
           >
-            @{company}{" "}
+            @{item.company}{" "}
           </a>
         </h3>
         <span className="capitalize font-medium text-dark/75">
-          {time} | {address}
+          {item.time} | {item.address}
         </span>
-        <p className="font-medium w-full">{work}</p>
+        {/* <p className="font-medium w-full">{work}</p> */}
+        <ul>
+
+        {item.work.map((item, index) => (
+          <li key={index} className="font-medium w-full">• {item}</li>
+        ))}
+        </ul>
       </motion.div>
     </li>
   );
@@ -54,39 +62,13 @@ const Experience = () => {
           className="absolute left-9 top-0 w-[4px] h-full bg-dark origin-top"
         />
         <ul className="w-full flex flex-col items-start justify-between ml-4">
-          <Details
-            position={"Front-End Developer"}
-            address={"Nairobi, Kenya"}
-            company={"Gitstart YC6"}
-            companyLink={""}
-            time={"2022-08 - 2023-03"}
-            work={
-              "Tested web-based product functionality and delivered iterations to customer, while using improved tools to boost user interaction and deliver design versatility."
-            }
-            key={"2022-08 - 2023-03"}
+          {work_experience.map((experience, index) => (
+            <Details
+            key={index}
+            item={experience}
           />
-          <Details
-            position={"Front-End Developer"}
-            address={"Nairobi, Kenya"}
-            company={"Mombo Sacco"}
-            companyLink={""}
-            time={"2021-08 - 2022-07"}
-            work={
-              "Collaborated with stakeholders duting development processes to confirm creative proposals and design best practices."
-            }
-            key={"2021-08 - 2022-07"}
-          />
-          <Details
-            position={"Mobile Application Developer"}
-            address={"Nairobi, Kenya"}
-            company={"Medbook Kenya ltd"}
-            companyLink={""}
-            time={"2019-05 - 2021-05"}
-            work={
-              "Tracked post-deployment bug reports to recognize and resolve trends among user-reported faults and complaints while documenting design patterns for later use as templates in subsequent patches and iterative app development cycles."
-            }
-            key={"2019-05 - 2021-05"}
-          />
+          ))}
+        
         </ul>
       </div>
     </div>
