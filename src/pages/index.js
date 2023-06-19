@@ -5,7 +5,7 @@ import Image from "next/image";
 import Layout from "@/components/Layout";
 import Link from "next/link";
 import { LinkArrow } from "@/components/Icons";
-import dummyImage from "../../public/images/profile.png";
+import dummyImage from "../../public/images/test1.png";
 
 export default function Home() {
   return (
