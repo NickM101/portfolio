@@ -6,9 +6,9 @@ import Head from "next/head";
 import Image from "next/image";
 import Layout from "@/components/Layout";
 import profilePicture from "../../public/images/profile.png";
-import ParallaxSquare from "@/components/ParallaxSquare";
 import Experience from "@/components/Experience";
 import Education from "@/components/Education";
+import Skills from "@/components/Skills";
 
 const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
@@ -35,21 +35,7 @@ const AnimatedNumbers = ({ value }) => {
 };
 
 const about = () => {
-  const [jsonData, setJsonData] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch("tech.json");
-        const data = await response.json();
-        setJsonData(data);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
 
   return (
     <>
@@ -142,16 +128,7 @@ const about = () => {
               </div>
             </div>
           </div>
-          <div className="my-20">
-            <h2 className="font-bold text-8xl w-full text-center">Skills</h2>
-            <div className="w-full flex flex-wrap items-center justify-center">
-              {jsonData.map((item, index) => (
-                <div key={index} className="m-4">
-                  <ParallaxSquare imageSrc={profilePicture} text={item.name} />
-                </div>
-              ))}
-            </div>
-          </div>
+         <Skills />
           <Experience />
           <Education />
         </Layout>
