@@ -83,32 +83,29 @@ export const school_education = [
     date: "2022-08 - 2026-03",
     honor: "Degree",
     courseWork: [
-        "Programming Languages",
-        "Data Structures and Algorithms",
-        "Computer Organization and Architecture",
-        "Machine Learning"
+      "Programming Languages",
+      "Data Structures and Algorithms",
+      "Computer Organization and Architecture",
+      "Machine Learning",
     ],
   },
-  {
-    major: "Information Technology",
-    name: "Catholic University of East Africa, Nairobi",
-    date: "2022-08 - 2026-03",
-    honor: "Diploma",
-    courseWork: [
-        "Introduction to Information Technology",
-        "Network Administration and Security",
-        "Information Systems Management"
-    ],
-  },
+
   {
     major: "Core Program in Web Development",
     name: "Moringa School",
     date: "2018-10 - 2019-02",
     honor: "Certificate",
+    courseWork: ["Web Development Technologies", "Database Management Systems"],
+  },
+  {
+    major: "Information Technology",
+    name: "Catholic University of East Africa, Nairobi",
+    date: "2017-09 - 2019-04",
+    honor: "Diploma",
     courseWork: [
-        "Web Development Technologies",
-        "Database Management Systems",
+      "Introduction to Information Technology",
+      "Network Administration and Security",
+      "Information Systems Management",
     ],
   },
-  
 ];
