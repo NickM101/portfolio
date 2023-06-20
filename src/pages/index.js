@@ -22,6 +22,8 @@ export default function Home() {
                 src={dummyImage}
                 alt="Nick Munene"
                 className="w-full h-auto"
+                priority
+                sizes="(max-width: 768px) 100 vw, (max-width: 1200px) 50vw, 50vw"
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center mx-4">
