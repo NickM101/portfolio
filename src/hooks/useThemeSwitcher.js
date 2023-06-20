@@ -49,4 +49,4 @@ const useThemeSwitcher = () => {
   return [mode, setMode];
 }
 
-export default useThemeSwitcher
+export default useThemeSwitcher;
