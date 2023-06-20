@@ -14,7 +14,7 @@ export default function Home() {
         <title>Nick Munene | Software Engineer | Creating Innovative Solutions</title>
         <meta name="description" content="Welcome to the website of Nick Munene, a skilled and passionate software engineer specializing in creating innovative solutions. Explore Nick Munene's portfolio, expertise, and commitment to driving business success through cutting-edge software development." />
       </Head>
-      <main>
+      <main className="flex items-center text-dark w-full min-h-screen dark:text-light">
         <Layout className="pt-0">
           <div className="flex items-center justify-between w-full">
             <div className="w-1/2">
