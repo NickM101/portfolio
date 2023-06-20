@@ -44,7 +44,7 @@ export default function Home() {
                 <Link
                   href="/resume.pdf"
                   target="_blank"
-                  className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold mx-2 hover:bg-light hover:text-dark border-2 border-solid border-transparent hover:border-dark"
+                  className="flex items-center bg-dark dark:bg-light text-light dark:text-dark p-2.5 px-6 rounded-lg text-lg font-semibold mx-2 hover:bg-light hover:text-dark hover:dark:bg-dark hover:dark:border-light hover:dark:text-light border-2 border-solid border-transparent hover:border-dark"
                   download={true}
                 >
                   Resume <LinkArrow className="w-6 ml-1" />
@@ -52,7 +52,7 @@ export default function Home() {
                 <Link
                   href="mailto:nickmunene101@gmail.com"
                   target="_blank"
-                  className="ml-4 text-lg font-medium capitalize text-dark underline "
+                  className="ml-4 text-lg font-medium capitalize text-dark underline dark:text-light"
                 >
                   Contact Me
                 </Link>
